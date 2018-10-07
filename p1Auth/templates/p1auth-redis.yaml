@@ -1,26 +1,25 @@
-{{- if .Values.enableRedis }}
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: redis-auth-pv
+  name: p1-auth-redis
   labels:
     app: auth
 spec:
-  storageClassName: manual
   persistentVolumeReclaimPolicy: Retain
   capacity:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: "/k8sdata/redis-auth"
+  nfs:
+    server: 172.29.13.72
+    path: "/k8sdata/p1-auth-redis"
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: redis-auth-pv-claim
+  name: p1-auth-redis
 spec:
-  storageClassName: manual
+  storageClassName: ""
   accessModes:
     - ReadWriteOnce
   resources:
@@ -30,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-auth
+  name: p1-auth-redis
   labels:
     app: auth
     role: redis
@@ -46,7 +45,7 @@ apiVersion: apps/v1
 #kind: StatefulSet
 kind: Deployment
 metadata:
-  name: redis-auth
+  name: p1-auth-redis
 spec:
 #  serviceName: mongo
   selector:
@@ -61,9 +60,9 @@ spec:
         role: redis
     spec:
       volumes:
-      - name: redis-auth-pv-storage
+      - name: p1-auth-redis
         persistentVolumeClaim:
-          claimName: redis-auth-pv-claim
+          claimName: p1-auth-redis
       containers:
       - name: redis
         image: redis:3.2.12-alpine
@@ -71,9 +70,6 @@ spec:
         ports:
         - containerPort: 6379
         volumeMounts:
-        - name: redis-auth-pv-storage
+        - name: p1-auth-redis
           mountPath: /data
           readOnly: false
-      nodeSelector:
-        node: node01
-{{- end }}
