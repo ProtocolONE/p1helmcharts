@@ -1,0 +1,30 @@
+{{- $app := .Values.apps.admin -}}
+{{- $deployment := $app.deployments.nginx -}}
+{{- $endpoint := printf "%s-%s" $app.name $deployment.name}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $app.name }}
+  labels:
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    app: {{ $app.name }}
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/tls-acme: "true"
+spec:
+  tls:
+  - hosts: 
+    - {{ $app.ingress.hostname }}
+    secretName: letsencrypt-prod-sec
+  rules:
+  - host: {{ $app.ingress.hostname }}
+    http:
+      paths:
+      - path: {{ $app.ingress.path }}
+        backend:
+          serviceName: {{ $endpoint }}
+          servicePort: {{ $deployment.service.port }}
