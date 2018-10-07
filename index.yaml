@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  p1Auth:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-10-07T14:16:29.5148249+03:00
+    description: A Helm chart for Protocol.One Auth service
+    digest: 87b26c94d50946fdc723db5681647910b8aa45126e7aceff4ecb843bf3d49af0
+    name: p1Auth
+    urls:
+    - p1Auth/p1Auth-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-10-07T14:16:29.5129946+03:00
