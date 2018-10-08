@@ -8,7 +8,7 @@ enableCertIssuer: false
 
 apps:
   admin:
-    name: p1api
+    name: p1admin
     ingress:
       hostname: admin-tst.protocol.one
       path: /

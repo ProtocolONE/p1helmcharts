@@ -2,18 +2,10 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount:
-  nginx: 2
-  fpm: 2
-
 enableRedis: false
 enableMongo: false
 enableCertIssuer: false
 
-images:
-  nginx: "nginx:1.15.4"
-  fpm-auth: "p1hub/p1-dev.php-fpm:latest"
-  
 apps:
   auth:
     name: p1auth
