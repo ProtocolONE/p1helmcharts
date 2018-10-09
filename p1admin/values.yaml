@@ -15,7 +15,7 @@ apps:
     deployments:
       nginx:
         name: nginx
-        image: "p1hub/admin.protocol.one-nginx"
+        image: "p1hub/admin.protocol.one-nginx:latest"
         port: 80
         replicas: 1
         service: 
@@ -27,7 +27,7 @@ apps:
           mountPath: /etc/nginx/conf.d/
       fpm:
         name: fpm
-        image: "p1hub/admin.protocol.one"
+        image: "p1hub/admin.protocol.one:latest"
         port: 9000
         replicas: 1
         service:

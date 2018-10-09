@@ -27,7 +27,7 @@ apps:
           mountPath: /etc/nginx/conf.d/
       fpm:
         name: fpm
-        image: "p1hub/auth.protocol.one"
+        image: "p1hub/auth.protocol.one:latest"
         port: 9000
         replicas: 1
         service:
