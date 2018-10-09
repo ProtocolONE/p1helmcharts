@@ -2,7 +2,7 @@
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: ClusterIssuer
 metadata:
-  name: letsencrypt-prod
+  name: p1auth
 spec:
   acme:
     # The ACME production api URL
@@ -11,7 +11,7 @@ spec:
     email: admin@protocol.one
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: letsencrypt-prod-secret
+      name: p1auth-ssl-secret
     # Enable the HTTP-01 challenge provider
     http01: {}
 {{- end }}

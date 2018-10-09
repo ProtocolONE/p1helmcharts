@@ -3,21 +3,21 @@
 # Declare variables to be passed into your templates.
 
 enableRedis: false
-enableMongo: false
-enableCertIssuer: false
+enableMongo: true
+enableCertIssuer: true
 
 apps:
   admin:
     name: p1admin
     ingress:
-      hostname: admin-tst.protocol.one
+      hostname: admin.tst.protocol.one
       path: /
     deployments:
       nginx:
         name: nginx
-        image: "nginx:1.15.4"
+        image: "p1hub/admin.protocol.one-nginx"
         port: 80
-        replicas: 2
+        replicas: 1
         service: 
           name: nginx
           type: ClusterIP
@@ -27,9 +27,9 @@ apps:
           mountPath: /etc/nginx/conf.d/
       fpm:
         name: fpm
-        image: "p1hub/admin.protocol.one:1.0.0"
+        image: "p1hub/admin.protocol.one"
         port: 9000
-        replicas: 2
+        replicas: 1
         service:
           name: fpm
           type: ClusterIP

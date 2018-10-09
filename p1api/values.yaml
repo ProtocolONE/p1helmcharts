@@ -4,20 +4,20 @@
 
 enableRedis: false
 enableMongo: false
-enableCertIssuer: false
+enableCertIssuer: true
 
 apps:
   api:
     name: p1api
     ingress:
-      hostname: api-tst.protocol.one
+      hostname: api.tst.protocol.one
       path: /
     deployments:
       nginx:
         name: nginx
         image: "nginx:1.15.4"
         port: 80
-        replicas: 2
+        replicas: 1
         service: 
           name: nginx
           type: ClusterIP
@@ -27,9 +27,9 @@ apps:
           mountPath: /etc/nginx/conf.d/
       fpm:
         name: fpm
-        image: "p1hub/api.protocol.one:1.0.0"
+        image: "p1hub/api.protocol.one"
         port: 9000
-        replicas: 2
+        replicas: 1
         service:
           name: fpm
           type: ClusterIP
