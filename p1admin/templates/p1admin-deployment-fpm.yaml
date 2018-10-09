@@ -40,6 +40,37 @@ spec:
       containers:
       - name: {{ $resourceName }}
         image: {{ $deployment.image }}
+        env:
+          - name: S3_BUCKET_NAME
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-s3
+                key: s3_bucket_name
+          - name: S3_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-s3
+                key: s3_secret_key
+          - name: S3_REGION
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-s3
+                key: s3_region
+          - name: S3_ACCESS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-s3
+                key: s3_access_key
+          - name: S3_VERSION
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-s3
+                key: s3_version
+          - name: S3_SDK_VERSION
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-s3
+                key: s3_sdk_version
         ports:
         - containerPort: {{ $deployment.port }}
         {{- if $deployment.configMap }}
