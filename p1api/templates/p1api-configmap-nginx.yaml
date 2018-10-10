@@ -11,6 +11,8 @@ metadata:
     release: {{ .Release.Name }}
     app: {{ $app.name }}
     role: {{ $deployment.name }}
+  annotations: 
+    released: {{ .Release.Time}}    
 data:
   {{ $app.ingress.hostname }}.conf: |
       server {
