@@ -20,6 +20,8 @@ spec:
       release: {{ .Release.Name }}
       app: {{ $app.name }}
       role: {{ $deployment.name }}
+    annotations:
+      released: {{ .Release.Time}}
   replicas: {{ $deployment.replicas }} 
   strategy:
     type: RollingUpdate
