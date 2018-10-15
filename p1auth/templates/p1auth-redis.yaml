@@ -24,7 +24,7 @@ spec:
   storageClassName: ""
   selector:
     matchLabels:
-      app: "admin"  
+      app: "auth"  
       role: "redis"  
   accessModes:
     - ReadWriteOnce
