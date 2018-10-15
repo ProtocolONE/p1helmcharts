@@ -5,6 +5,7 @@ metadata:
   name: p1auth-mongo
   labels:
     app: auth
+    role: mongo
 spec:
   persistentVolumeReclaimPolicy: Retain
   capacity:
@@ -21,6 +22,10 @@ metadata:
   name: p1auth-mongo
 spec:
   storageClassName: ""
+  selector:
+    matchLabels:
+      app: "admin"  
+      role: "mongo"
   accessModes:
     - ReadWriteOnce
   resources:

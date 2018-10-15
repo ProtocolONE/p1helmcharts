@@ -5,6 +5,7 @@ metadata:
   name: p1auth-redis
   labels:
     app: auth
+    role: redis
 spec:
   persistentVolumeReclaimPolicy: Retain
   capacity:
@@ -21,6 +22,10 @@ metadata:
   name: p1auth-redis
 spec:
   storageClassName: ""
+  selector:
+    matchLabels:
+      app: "admin"  
+      role: "redis"  
   accessModes:
     - ReadWriteOnce
   resources:
