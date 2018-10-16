@@ -45,6 +45,26 @@ spec:
       - name: {{ $resourceName }}
         image: {{ $deployment.image }}
         env:
+          - name: MONGO_SERVER
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-mongo-connection
+                key: MONGO_SERVER
+          - name: MONGO_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-mongo-connection
+                key: MONGO_DATABASE
+          - name: MONGO_USER
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-mongo-connection
+                key: MONGO_USER
+          - name: MONGO_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: p1admin-mongo-connection
+                key: MONGO_PASSWORD
           - name: S3_BUCKET_NAME
             valueFrom:
               secretKeyRef:
