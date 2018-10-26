@@ -44,6 +44,11 @@ spec:
       containers:
       - name: {{ $resourceName }}
         image: {{ $deployment.image }}
+        env:
+          - name: P1AUTH_URL
+            value: {{ $deployment.p1auth_url }}
+          - name: P1PAYAPI_URL
+            value: {{ $deployment.p1payapi_url }}
         ports:
         - containerPort: {{ $deployment.port }}
         {{- if $deployment.configMap }}

@@ -3,9 +3,9 @@ entries:
   p1admin:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T19:51:46.2880446+03:00
+    created: 2018-10-26T20:16:41.6149516+03:00
     description: A Helm chart for Protocol.One Admin service
-    digest: e84f99249622a0ea0adc3468f0fb09356fd1cfab95b95db8598bcffb91ce26ad
+    digest: 40449775168fe3b90f586090de4a0385c95e5ddc1f8346fbeba00a1e7936c7a3
     name: p1admin
     urls:
     - p1admin/p1admin-0.1.0.tgz
@@ -13,9 +13,9 @@ entries:
   p1api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T19:51:46.2897112+03:00
+    created: 2018-10-26T20:16:41.6166917+03:00
     description: A Helm chart for Protocol.One API service
-    digest: 2ca4d1647490a3c1e3f532cb65cd4ff0061575f3955493df2ebe9436b3aac943
+    digest: 4d1a9c253e0b366973db2f93d636b16e0c66343de6e4a408f55f3ad726641632
     name: p1api
     urls:
     - p1api/p1api-0.1.0.tgz
@@ -23,9 +23,9 @@ entries:
   p1auth:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T19:51:46.2914378+03:00
+    created: 2018-10-26T20:16:41.6186567+03:00
     description: A Helm chart for Protocol.One Auth service
-    digest: eb811e1aaea3b9878ab6ff95f05f8cec4d0158e61e713855f37650620429f456
+    digest: 36b35506ac514fcd1359423fc6f8a0f2849c089315bb4097d1391c21afa59ac2
     name: p1auth
     urls:
     - p1auth/p1auth-0.1.0.tgz
@@ -33,9 +33,9 @@ entries:
   p1payapi:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T19:51:46.2928057+03:00
+    created: 2018-10-26T20:16:41.6203285+03:00
     description: A Helm chart for Protocol.One Pay.API service
-    digest: 1b7d60b1e51738c844390434988b6a5524ee791d29bed810f31bdb6758b06490
+    digest: 5d294f9416df98d8271ff47c9903ce7c39aee49d8be89325cca9a3123f1c11a6
     name: p1payapi
     urls:
     - p1payapi/p1payapi-0.0.1.tgz
@@ -43,11 +43,11 @@ entries:
   p1payfront:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T19:51:46.2935462+03:00
+    created: 2018-10-26T20:16:41.6212335+03:00
     description: A Helm chart for Protocol.One Pay.Front service
-    digest: 48246fe68806e7768671907d27359f3a1cfd99a0fcb79d61e16939cb615bfaa3
+    digest: ae0d65a580a3bce234ed2205ce282df9b50f529133c61a50f91d679a1d4962cb
     name: p1payfront
     urls:
     - p1payfront/p1payfront-0.0.1.tgz
     version: 0.0.1
-generated: 2018-10-26T19:51:46.2860902+03:00
+generated: 2018-10-26T20:16:41.6126648+03:00
