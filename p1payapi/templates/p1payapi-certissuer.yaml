@@ -12,7 +12,7 @@ spec:
     email: admin@protocol.one
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: {{ $app.name }}-acme-secret
+      name: {{ $app.name }}-ssl-secret
     # Enable the HTTP-01 challenge provider
     http01: {}
 {{- end }}
