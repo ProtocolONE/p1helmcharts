@@ -1,7 +1,7 @@
 {{- $app := .Values.apps.p1payapi -}}
 {{- $deployment := $app.deployments.nginx -}}
 {{- $resourceName := printf "%s-%s" $app.name $deployment.name }}
-{{- $appBackendName := printf "%s-%s" $app.name $app.deployments.goBackend.name }}
+{{- $appBackendName := printf "%s-%s" $app.name $app.deployments.gobackend.name }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -14,7 +14,7 @@ metadata:
 data:
   {{ $app.ingress.hostname }}.conf: |
       upstream {{ $appBackendName }}  {
-        server {{ $appBackendName }}:{{ $app.deployments.goBackend.service.Port }};
+        server {{ $appBackendName }}:{{ $app.deployments.gobackend.service.Port }};
       }
 
 

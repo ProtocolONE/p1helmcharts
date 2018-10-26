@@ -25,13 +25,13 @@ apps:
           protocol: TCP
         configMap: 
           mountPath: /etc/nginx/conf.d/
-      goBackend:
-        name: goBackend
+      gobackend:
+        name: gobackend
         image: "p1hub/p1pay.api.protocol.one:latest"
         port: 3001
         replicas: 1
         service:
-          name: goBackend
+          name: gobackend
           type: ClusterIP
           port: 3001
           protocol: TCP

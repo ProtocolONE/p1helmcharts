@@ -1,5 +1,5 @@
 {{- $app := .Values.apps.p1payapi -}}
-{{- $deployment := $app.deployments.goBackend -}}
+{{- $deployment := $app.deployments.gobackend -}}
 {{- $resourceName := printf "%s-%s" $app.name $deployment.name }}
 apiVersion: v1
 kind: Service
