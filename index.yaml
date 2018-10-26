@@ -3,9 +3,9 @@ entries:
   p1admin:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T16:16:14.4376596+03:00
+    created: 2018-10-26T16:27:10.4906537+03:00
     description: A Helm chart for Protocol.One Admin service
-    digest: bd96e1cef72a5120264133caccc7e9580f4e6a134beb8f8395a5a3342d288bea
+    digest: 1c04d248b170951e5db6b3e76d9a8f78fa35569eedd3d2c16863c8e65832e5eb
     name: p1admin
     urls:
     - p1admin/p1admin-0.1.0.tgz
@@ -13,9 +13,9 @@ entries:
   p1api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T16:16:14.4390085+03:00
+    created: 2018-10-26T16:27:10.4921604+03:00
     description: A Helm chart for Protocol.One API service
-    digest: 51653f89d60e117636da76a227225c93ac9a89de83403a1634b24a1f0bdb9c1e
+    digest: ae609553c7514811942f7927bd645781ed69ece4226c5f6d18870eb1c79c6bd3
     name: p1api
     urls:
     - p1api/p1api-0.1.0.tgz
@@ -23,9 +23,9 @@ entries:
   p1auth:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T16:16:14.4404254+03:00
+    created: 2018-10-26T16:27:10.4938289+03:00
     description: A Helm chart for Protocol.One Auth service
-    digest: ebed300addce3cb84d92d4af02c95a2f2dcad3de1fc59260fc38839da1f0c05c
+    digest: 0f697a9b41a2e3e1c42cb28d9df9e7f149cb338fcaba9587b9680e93d6acc08d
     name: p1auth
     urls:
     - p1auth/p1auth-0.1.0.tgz
@@ -33,11 +33,11 @@ entries:
   p1payapi:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T16:16:14.4411064+03:00
+    created: 2018-10-26T16:27:10.4948272+03:00
     description: A Helm chart for Protocol.One Pay.API service
-    digest: 20301a55f859db0350f658f6c7e2cd0052156c46ef5a2b8daab391313f45b741
+    digest: 80ddac5dbac7fc2cacd4d67d50b4490de051b73b98ffc27eebd2a704e1b06340
     name: p1payapi
     urls:
     - p1payapi/p1payapi-0.0.1.tgz
     version: 0.0.1
-generated: 2018-10-26T16:16:14.4358479+03:00
+generated: 2018-10-26T16:27:10.4887435+03:00
