@@ -69,6 +69,7 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: {{ $app.name }}-jwt-secret
+                key: {{ $app.name }}-jwt-secret
         ports:
         - containerPort: {{ $deployment.port }}
         {{- if $deployment.configMap }}
