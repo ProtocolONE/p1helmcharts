@@ -11,6 +11,8 @@ cd ../p1auth
 helm lint . && helm package .
 cd ../p1payapi
 helm lint . && helm package .
+cd ../p1payfront
+helm lint . && helm package .
 
 cd ..
 helm repo index .
