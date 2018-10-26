@@ -1,5 +1,5 @@
 {{- $app := .Values.apps.p1payfront -}}
-{{- $deployment := $app.deployments.nginx -}}
+{{- $deployment := $app.deployments.nodejs -}}
 {{- $endpoint := printf "%s-%s" $app.name $deployment.name}}
 apiVersion: extensions/v1beta1
 kind: Ingress
