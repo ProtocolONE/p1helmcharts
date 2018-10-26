@@ -14,7 +14,7 @@ metadata:
 data:
   {{ $app.ingress.hostname }}.conf: |
       upstream {{ $appBackendName }}  {
-        server {{ $appBackendName }}:{{ $app.deployments.gobackend.service.Port }};
+        server {{ $appBackendName }}:{{ $app.deployments.gobackend.service.port }};
       }
 
 
