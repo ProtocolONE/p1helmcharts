@@ -48,22 +48,22 @@ spec:
           - name: MONGO_SERVER
             valueFrom:
               secretKeyRef:
-                name: p1admin-mongo-connection
+                name: p1admin-mongo
                 key: MONGO_SERVER
           - name: MONGO_DATABASE
             valueFrom:
               secretKeyRef:
-                name: p1admin-mongo-connection
+                name: p1admin-mongo
                 key: MONGO_DATABASE
           - name: MONGO_USER
             valueFrom:
               secretKeyRef:
-                name: p1admin-mongo-connection
+                name: p1admin-mongo
                 key: MONGO_USER
           - name: MONGO_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: p1admin-mongo-connection
+                name: p1admin-mongo
                 key: MONGO_PASSWORD
           - name: S3_BUCKET_NAME
             valueFrom:

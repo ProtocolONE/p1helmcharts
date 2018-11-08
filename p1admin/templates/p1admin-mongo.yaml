@@ -35,7 +35,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: p1-admin-mongo
+  name: p1admin-mongo
   labels:
     app: admin
     role: mongo
