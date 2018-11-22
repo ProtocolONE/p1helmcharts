@@ -35,15 +35,15 @@ spec:
       annotations:
         released: {{ .Release.Time}}
     spec:
-      {{- if $deployment.configMap }}
       volumes:
+      - name: p1payapi-cardpay
+        secret:
+          secretName: p1payapi-cardpay
+      {{- if $deployment.configMap }}
       - name: {{ $resourceName }}
         configMap:
           name: {{ $resourceName }}
       {{- end }}
-      - name: p1payapi-cardpay
-        secret:
-          secretName: p1payapi-cardpay
       containers:
       - name: {{ $resourceName }}
         image: {{ $deployment.image }}
