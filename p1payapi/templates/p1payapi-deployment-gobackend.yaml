@@ -75,13 +75,12 @@ spec:
                 key: {{ $app.name }}-jwt-secret
         ports:
         - containerPort: {{ $deployment.port }}
-        {{- if $deployment.configMap }}
         volumeMounts:
+        - name: p1payapi-cardpay
+          mountPath: /application/config/parameters
+          readOnly: true
+        {{- if $deployment.configMap }}
         - name: {{ $resourceName }}
           mountPath: {{ $deployment.configMap.mountPath }}
           readOnly: true
         {{- end }}
-        volumeMounts:
-        - name: p1payapi-cardpay
-          mountPath: config/parameters/
-          readOnly: true
