@@ -40,10 +40,10 @@ spec:
       - name: {{ $resourceName }}
         configMap:
           name: {{ $resourceName }}
+      {{- end }}
       - name: p1payapi-cardpay
         secret:
           secretName: p1payapi-cardpay
-      {{- end }}
       containers:
       - name: {{ $resourceName }}
         image: {{ $deployment.image }}
