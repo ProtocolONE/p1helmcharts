@@ -40,6 +40,9 @@ spec:
       - name: {{ $resourceName }}
         configMap:
           name: {{ $resourceName }}
+      - name: p1payapi-cardpay
+        secret:
+          secretName: p1payapi-cardpay
       {{- end }}
       containers:
       - name: {{ $resourceName }}
@@ -78,3 +81,7 @@ spec:
           mountPath: {{ $deployment.configMap.mountPath }}
           readOnly: true
         {{- end }}
+        volumeMounts:
+        - name: p1payapi-cardpay
+          mountPath: config/parameters/
+          readOnly: true
