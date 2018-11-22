@@ -77,7 +77,7 @@ spec:
         - containerPort: {{ $deployment.port }}
         volumeMounts:
         - name: p1payapi-cardpay
-          mountPath: /application/config/parameters
+          mountPath: /application/config/
           readOnly: true
         {{- if $deployment.configMap }}
         - name: {{ $resourceName }}
