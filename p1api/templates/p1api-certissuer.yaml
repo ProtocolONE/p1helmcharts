@@ -1,6 +1,6 @@
 {{- if .Values.enableCertIssuer }}
 apiVersion: certmanager.k8s.io/v1alpha1
-kind: ClusterIssuer
+kind: Issuer
 metadata:
   name: p1api
 spec:
@@ -11,7 +11,7 @@ spec:
     email: admin@protocol.one
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: p1api-ssl-secret
+      name: p1api-acme-secret
     # Enable the HTTP-01 challenge provider
     http01: {}
 {{- end }}
